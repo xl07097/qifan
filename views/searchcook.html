@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--<title><%= key %>的搜索结果</title>-->
+	<title><%= title %></title>
+	<link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+	<link rel="stylesheet" href="/css/searchcook.css">
+	<script src="/js/jquery-3.1.1.js"></script>
+	<script src="/js/searchcook.js"></script>
+</head>
+<body>
+	<!--页头框架-->
+	<%- include('./header.html') %>
+	<div class="warp-shell">
+		<div class="shell-mc">
+			<div class="mgb10">
+				<span>菜谱搜索&gt;</span>
+				<span class="b">"<span class="search-key"><%= key %></span>"的搜索结果</span>
+			</div>
+		</div>
+		<div class="reAllList srcResult">
+			<ul class="showList" data-length="<%= searchlist.length %>">
+				<% searchlist.forEach(function(item){%>
+				<li class="cItem">
+							<span class="img">
+								<a href="/cook/detail?id=<%= item.cook_id %>">
+									<img src="/images/<%= item.cook_images %>" alt="<%= item.cook_name %>" title="<%= item.cook_name %>">
+								</a>
+							</span>
+							<div class="text">
+								<p class="name">
+									<a href="/cook/detail?id=<%= item.cook_id %>"><%= item.cook_name %></a>
+									<span class="postDate"><%= item.cook_date %></span>
+								</p>
+								<p class="info">
+									<span class="content"><%= item.cook_content %></span>
+								</p>
+								<span class="username">
+									by <a href="/users/personal?id=<%= item.t_user_id %>"><%= item.user_name %></a>
+								</span>
+								<span class="collect">收藏<span class="collectCount"><%= item.cook_collects %></span></span>
+								<span class="comment like">喜欢<span class="commentCount"><%= item.cook_likes %></span></span>
+							</div>
+						</li>
+				<% }) %>
+			</ul>
+		</div>
+	</div>
+
+	<!--页脚-->
+	<%- include('./footer.html') %>
+</body>
+</html>

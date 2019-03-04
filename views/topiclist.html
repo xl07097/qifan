@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>话题列表</title>
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+    <link rel="stylesheet" href="/css/topiclist.css">
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/topiclist.js"></script>
+</head>
+<body>
+
+    <%- include('./header.html') %>
+    <div id="main">
+        <div class="wropper">
+            <p class="titlenav">
+                <span>你的位置</span>&gt;
+                <span>全部文章</span>
+            </p>
+            <div class="maleft">
+                <div class="allside">
+                    <div class="alltopic" data-length="<%= topiclist.length %>">
+                        <%  topiclist.forEach(function(item){ %>
+                            <div class="atopic">
+                                <div class="scimg">
+                                    <a href="/topics/detail?id=<%= item.topic_id %>">
+                                        <img src="/images/topic/<%= item.img[0] %>" alt="<%= item.topic_name %>" title="<%= item.topic_name %>">
+                                    </a>
+                                </div>
+                                <div class="scart">
+                                    <h3>
+                                        <a href="/topics/detail?id=<%= item.topic_id %>"><%= item.topic_title %></a>
+                                    </h3>
+                                    <span class="name">
+                                        <a href="/personalOther?id=<%= item.t_user_user_id %>"><%= item.user_name %></a>
+                                        发表于 <%= item.topic_date %>
+                                    </span>
+                                    <div class="tcontent">
+                                        <%= item.topic_content  %>...
+                                        (<a href="/topics/detail?id=<%= item.topic_id %>">查看全文</a>)
+                                    </div>
+                                    <div class="navlink">
+                                        <span class="prm">
+                                            来自：<a href="javascript:void(0)">七饭·话题贴</a>
+                                        </span>
+                                        <span class="collectcount">收藏 <%= item.topic_collectNum %></span>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./footer.html') %>
+</body>
+</html>

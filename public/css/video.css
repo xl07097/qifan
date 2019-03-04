@@ -1,0 +1,169 @@
+#videoList{
+    width: 100%;
+    height: 1124px;
+}
+.item_block{
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    float: left;
+    margin: 0px 18px 26px 0px;
+    background-color: #ffffff;
+}
+.item_block:nth-child(4n){
+    margin-right: 0px;
+}
+.item_block:nth-child(1),.item_block:nth-child(2){
+    position: relative;
+    top:23px;
+}
+p{
+    width: 100%;
+    font-size: 1.2em;
+    color: #333;
+    margin: 0px;
+    text-align: left;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 200%;
+}
+.info img.sicon{
+    width: 16px;
+    height: 16px;
+    border: none;
+    box-shadow: none;
+}
+
+/*================单个视频缩略图单元================*/
+.video_item{
+    /*width: 33%;*/
+    height: auto;
+    margin: 0px;
+    /*padding: 15px 15px 0px 15px;*/
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #ddd;
+    box-sizing: border-box;
+}
+
+/*================单元中的视频图片格式================*/
+.video_item img{
+    width: 234px;
+    height: 185px;
+    border: none;
+    margin: 0px;
+    position: relative;
+}
+
+/*================鼠标悬停缩略图变暗并显示播放图标效果================*/
+.video_item .glass {
+    left: 0px;
+    top: 0px;
+    background: url("../video/videoIMG/viewblack.jpg") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 185px;
+    position: absolute;
+    visibility: hidden;
+    width: 234px;
+}
+.video_item .play {
+    left: 90px;
+    top: 60px;
+    background: url("../video/videoIMG/icon_play.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 60px;
+    position: absolute;
+    visibility: hidden;
+    width: 60px;
+}
+.video_item a:hover .glass {
+    cursor: pointer;
+    visibility:visible;
+    opacity:0.4;
+    filter:alpha(opacity=40);
+}
+.video_item a:hover .play{
+    visibility:visible;
+}
+
+/*================h4 视频名和item p================*/
+h4.video_name{
+    /*width: 100%;*/
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    padding: 15px 0px 0px 5px;
+    margin: 0px;
+    line-height: 1.2em;
+    color: #12937C;
+    /*border-bottom: 1px dashed lightgray;*/
+    display: inline-block;
+}
+/*================信息描述：喜欢输和评论数================*/
+.info{
+    position: relative;
+    padding-bottom: 0px;
+    color: #000000;
+    /*padding-top: 20px;*/
+}
+.author .likes{
+    width: auto;
+    height: 20px;
+}
+.author .comments,.author .likes{
+    width: auto;
+    height: 20px;
+}
+.author .likes,.author .comments{
+    /*cursor: pointer;*/
+}
+.red{
+    color:red;
+}
+.info .by{
+    font-size: 12px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+}
+.info .author{
+     position: relative;
+    display: inline-block;
+ }
+.author .hrefusername{
+    font-size: 14px;
+}
+.author .author_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    position: absolute;
+    top: -70px;
+    left: 140px;
+    box-shadow: none;
+    border: 4px solid #ffffff;
+}
+
+.author .authorname{
+    position: absolute;
+    bottom: 0px;
+}
+
+.info img.sicon{
+    width: 16px;
+    height: 16px;
+    border: none;
+    box-shadow: none;
+}
+/*=============================分页=============================*/
+.cookBtn{
+    height: 30px;
+    margin: 0px auto;
+}
+.cookBtn .menBtn{
+    text-align: center;
+
+}

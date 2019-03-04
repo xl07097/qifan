@@ -1,0 +1,75 @@
+#personal_video{
+    overflow: hidden;
+    height: auto;
+}
+.pV{
+    padding-left: 12.5px;
+    margin: 0px 0px 7px 0px;
+}
+/*===========item===========*/
+#personal_video .item{
+    width: 222px;
+    height: 300px;
+    border: 1px solid lightgray;
+    float: left;
+    margin: 0px 12.5px 25px 12.5px;
+    box-sizing: border-box;
+    box-shadow:0px 2px 3px #D4D4D4;
+    position: relative;
+}
+#personal_video .item:hover{
+    cursor: pointer;
+}
+/*===========item内的元素===========*/
+.itemV img{
+    width: 220px;
+    height: 220px;
+}
+.itemV h3.itemV-user{
+    margin: 0px;
+    width: 180px;
+    padding: 9px 20px 3px 20px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 18px;
+    height: 20px;
+    color: #12937C;
+    margin-right: 0px;
+}
+.itemV span {
+    width: 180px;
+    padding: 0 20px 0 20px;
+    text-align: center;
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+}
+/*.itemV .align{*/
+    /*width: 180px;*/
+    /*text-align: center;*/
+/*}*/
+.itemV .block{
+    position: absolute;
+    top: -12px;
+    right: 0px;
+    display: none;
+}
+.block .deleteV,.block .editV{
+    width: 40px;
+    height: 16px;
+    line-height: 12px;
+    text-align: center;
+    padding-top: 5px;
+    float: right;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    font-family:  'microsoft yaHei', '微软雅黑', arial;
+    font-size: 12px;
+    color: #58938D;
+    background-color: #ffffff;
+
+}
+.item:hover .block{
+    display:block;
+}

@@ -1,0 +1,42 @@
+.editContent{
+    width: 100%;
+    height: 200px;
+    padding: 20px 0px;
+    border-bottom: 1px solid #DEDED3;
+}
+.editImg{
+    width: 250px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 4px;
+    background: url('/images/publicHtml/edit.jpg') no-repeat;
+    display: inline-block;
+}
+.editImg img{
+    width: 250px;
+    height: 200px;
+}
+.editBox{
+    width: 450px;
+    height: 200px;
+    float: right;
+}
+.editSelect{
+    width: 100%;
+    height: 23px;
+    padding-bottom: 10px;
+}
+.editStory{
+    width: 450px;
+    height: 165px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.selHide{
+    display: none;
+}
+.selShow{
+    display: block;
+}

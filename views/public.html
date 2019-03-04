@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/css/commonFont.css" type="text/css">
+    <link rel="stylesheet" href="/css/public.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/public.js"></script>
+    <script src="/js/publicCommon.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+
+</head>
+<body>
+<%- include('./header.html')%>
+<div class="publicHome">
+    <div class="selectPublic">
+        <h2 class="selectCook selected">创建菜谱</h2>|
+        <h2 class="selectVideo"> 发布视频</h2>|
+        <h2 class="selectTopic"> 发布话题</h2>
+    </div>
+    <form id="form1">
+        <div class="publicContent">
+            <div class="contentTitle">
+                <input type="text" class="contentInput" placeholder="菜谱名称" name="title">
+                <div class="selBox">
+                    <select id="sel1">
+                        <% cookType.forEach(function(item){%>
+                        <option data-id="cook<%= item.bigtype_id%>"><%= item.bigtype_name%></option>
+                        <%})%>
+                    </select>
+                    <% for(var i = 0 ;i < cookType.length ; i++){%>
+                    <% for(var j = 0 ; j < smallType.length ; j++){%>
+                    <% if( cookType[i].bigtype_id == smallType[j][0].bigtype_id){%>
+                    <select class="selType" data-id="cook<%= cookType[i].bigtype_id%>">
+                        <% for(var k=0;k < smallType[j].length ; k++){%>
+                        <option class="smallType" data-id="<%= smallType[j][k].smalltype_id%>"><%= smallType[j][k].smallType_name%></option>
+                        <% }%>
+                    </select>
+                    <% }%>
+                    <% }%>
+                    <% }%>
+                </div>
+            </div>
+            <div class="addContent">
+                <div class="uploadImg" id="uploadImg">
+                    <img src="/images/publicHtml/bg_jiaic.jpg" id="img0" >
+                </div>
+                <input type="file" name="file1" id="fileBtn" style="display: none">
+                <div class="cookingSelect">
+                    <select class="cookingLevel" name="difficult">
+                        <option>烹饪难度</option>
+                        <option>切墩(初级)</option>
+                        <option>配菜(中级)</option>
+                        <option>掌勺(高级)</option>
+                    </select>
+                    <select class="cookingTime" name="cookTime">
+                        <option>烹饪时间</option>
+                        <option>10分钟左右</option>
+                        <option>10-30分钟</option>
+                        <option>30-60分钟</option>
+                        <option>1小时以上</option>
+                    </select>
+                </div>
+                <textarea class="cookingStory" placeholder="这道菜背后的故事~(选填)" name="story"></textarea>
+
+            </div>
+            <div class="addDosage">
+                <div class="dosageLeft" id="mater">
+                    <div class="dosageText">
+                        <span class="liao">主料</span>
+                        <span class="liang">用量</span>
+                    </div>
+                    <div class="dosageAdd">
+                        <input type="text" class="dosageInputL matName" placeholder="如:五花肉">
+                        <input type="text" class="dosageInputR matNum" placeholder="如:250g">
+                        <img src="/images/ic_mes.png"  class="dosImg">
+                    </div>
+                </div>
+
+                <div class="dosageRight" id="submater">
+                    <div class="dosageText">
+                        <span class="liao">辅料</span>
+                        <span class="liang">用量</span>
+                    </div>
+                    <div class="dosageAdd">
+                        <input type="text" class="dosageInputL subName" placeholder="如:盐">
+                        <input type="text" class="dosageInputR subNum" placeholder="如:1勺">
+                        <img src="/images/ic_mes.png" class="dosImg">
+                    </div>
+
+                </div>
+            </div>
+            <div class="addStep">
+                <h3 class="stepTitle">步骤</h3>
+
+            </div>
+        </div>
+        <div class="buttonPublic">
+            <input type="button" class="public" id="publicCook" value="发布">
+        </div>
+    </form>
+</div>
+<%- include('./footer.html')%>
+
+</body>
+</html>

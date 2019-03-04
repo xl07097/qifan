@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/index.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/slide.css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/slide.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+
+
+</head>
+<body>
+<%- include('./header.html')%>
+<div class="homePage">
+    <div class="imgCarousel">
+        <div id="show" rel="autoPlay">
+            <div class="img">
+                     <span>
+                         <% car_list.forEach(function(item){%>
+                             <a href="/cook/detail?id=<%= item.cook_id%>" target="_blank">
+                                 <h1 class="carCookName"><%= item.cook_name%></h1>
+                                 <span class="carUserName"> by <%= item.user_name%></span>
+                                 <img src="/images/<%= item.cook_images%>" />
+                             </a>
+                         <%})%>
+                     </span>
+                <div class="masks mk1"></div>
+                <div class="masks mk2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--推荐-->
+    <div class="homeRecommend">
+        <p class="recommendTitle"><a class="recommendTitleA" href="#">饭饭推荐</a><a href="/cook?id=1" class="linkMore">查看更多</a></p>
+        <div class="recommendContent">
+            <!--菜谱推荐-->
+            <% recom_cookList.forEach(function(item){%>
+                <div class="recommendDiv">
+                    <a href="/cook/detail?id=<%= item.cook_id%>" class="recommendLian">
+                        <img class="recommendImg" src="/images/<%= item.cook_images%>">
+                    </a>
+                    <div class="recommendBox">
+                        <div class="portart">
+                            <a href="/personalOther?id=<%= item.user_id%>" target="_blank"><img src="/images/<%= item.user_portart%>"></a>
+                        </div>
+                        <a href="/cook/detail?id=<%= item.cook_id%>"><h3 class="recommendh3"><%= item.cook_name%></h3></a>
+                        <p class="recommendP">
+                            <span class="recommendSpan1"><%= item.cook_collects%>收藏</span>
+                            <span class="recommendSpan2"><%= item.cook_likes%>点赞</span>
+                        </p>
+                        <a class="recommendUser" href="/personalOther?id=<%= item.user_id%>" target="_blank"><%= item.user_name%></a>
+                    </div>
+                </div>
+            <%})%>
+          <!--视频推荐-->
+              <% recom_videoList.forEach(function(item){%>
+            <div class="recommendDiv last">
+                <a href="/video/detail?id=<%= item.video_id%>" class="recommendLian">
+                    <img class="recommendImg" src="/video/videoIMG/<%= item.video_img%>">
+                </a>
+                <div class="recommendBox">
+                    <div class="portart">
+                        <a href="/personalOther?id=<%= item.user_id%>" target="_blank"><img src="/images/<%= item.user_portart%>"></a>
+                    </div>
+                    <a href="/video/detail?id=<%= item.video_id%>"><h3 class="recommendh3"><%= item.video_name%></h3>
+                    </a>
+                    <p class="recommendP">
+                        <span class="recommendSpan1"><%= item.video_collects%>收藏</span>
+                        <span class="recommendSpan2"><%= item.video_likes%>点赞</span>
+                    </p>
+                    <a class="recommendUser" href="/personals?id=<%= item.user_id%>" target="_blank"><%= item.user_name%></a>
+                </div>
+                <a href="/video/detail?id=<%= item.video_id%>"><img src="/images/video_icon.png" title="这道菜谱有视频哦" class="recommendIcon"></a>
+            </div>
+            <%})%>
+        </div>
+    </div>
+
+    <div class="homeBottomBox">
+        <div class="recommendTopic">
+            <p class="recommendTitle"><a class="recommendTitleA" href="/topics">精彩话题</a> <a href="/topics" class="linkMore">查看更多</a></p>
+            <div class="topicBox">
+                <% for( var i = 0 ; i < 4 ; i++){%>
+                    <div class="topicDiv">
+                        <div class="topicLeft">
+                            <a href="/topics/detail?id=<%= topic_list[i].topic_id%>" target="_blank">
+                                <p class="topicTitle"><%= topic_list[i].topic_title%></p>
+                            </a>
+                            <p class="topicContent"><%= topic_list[i].topic_content%></p>
+                        </div>
+                        <div class="topicRight">
+                            <% for( var j = 0 ; j < 3 ; j++){%>
+                            <img src="/images/topic/<%= topic_list[i].img[j]%>">
+                            <% }%>
+                        </div>
+                    </div>
+                <% }%>
+            </div>
+        </div>
+        <div class="topicExpert">
+            <p class="recommendTitle"><a class="recommendTitleA" href="#">饭饭达人</a> </p>
+            <div class="expertBox">
+                <% user_list.forEach(function(item){%>
+                    <div class="expertDiv">
+                        <a href="/personalOther?id=<%= item.user_id%>" target="_blank"><img src="/images/<%= item.user_portart%>"></a>
+                        <div class="userMessage">
+                            <a href="/personalOther?id=<%= item.user_id%>" target="_blank"><%= item.user_name%></a>
+                            <span class="mesPosition"><%= item.collect_count%>收藏数</span>
+                            <span class="mesFan"><%= item.topic_count%>话题数</span>
+                        </div>
+                        <button class="expertBtn" data-id="<%= item.user_id%>">+关注</button>
+                    </div>
+                <% })%>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<%- include('./footer.html')%>
+
+</body>
+</html>

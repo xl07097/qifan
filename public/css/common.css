@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #F7F3E8;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-size: 12px;
+}
+a{
+text-decoration: none;
+}
+#header{
+    /*margin: 5px 0px;*/
+    width: 100%;
+    height: auto;
+    /*border: 1px solid gray;*/
+    /*box-sizing: border-box;*/
+}
+#header iframe{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    border: none;
+}
+.contentPage {
+    width: 1002px;
+    height: auto;
+    background-color: #F7F3E8;
+    margin: auto;
+}
+#footer{
+    margin: 5px 0px;
+    width: 100%;
+    height: auto;
+    /*border: 1px solid gray;*/
+    /*box-sizing: border-box;*/
+}
+#footer iframe{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border: none;
+}
+
+/*font*/
+h2{
+    font-family: 'Patua One', cursive;
+    color: #330;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+p{
+    width: 100%;
+    font-size: 1.2em;
+    color: #333;
+    text-align: left;
+    font-family: microsoft yahei;
+    line-height: 200%;
+}
+.derection{
+    font-size: 1.5em;
+    padding:10px 0px 5px 0px;
+    display: inline;
+}
+.small{
+    font-size: 1.2em;
+    padding:10px 0px 5px 0px;
+    display: inline;
+}
+.info{
+    width: 100%;
+    font-size: 1em;
+    color: #333;
+    /*border-bottom: dashed 1px #ccc;*/
+    text-align: left;
+    font-family: microsoft yahei;
+    line-height: 200%;
+    padding-bottom: 20px;
+}

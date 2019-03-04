@@ -1,0 +1,9 @@
+http://changyan.sohu.com/upload/changyan.js
+http://player.video.qiyi.com/660ccd1b02586f62851f2e7d8af6acdc/0/0/v_19rrh90m4g.swf-albumId=205589100-tvId=205589100-isPurchase=0-cnId=21
+http://player.video.qiyi.com/2ed6d66302fc3f386c25919d4795c810/0/0/v_19rrh89w3s.swf-albumId=208404900-tvId=208404900-isPurchase=0-cnId=21
+http://player.video.qiyi.com/33db29c220754665b9a0d991740c3bb8/0/0/10e335573c5e0905.swf-albumId=408036-tvId=493485-isPurchase=0-cnId=21
+http://player.video.qiyi.com/33db29c220754665b9a0d991740c3bb8/0/0/10e335573c5e0905.swf-albumId=408036-tvId=493485-isPurchase=0-cnId=21
+http://player.video.qiyi.com/86270c17a99a9e9979f139c74ec62347/0/0/v_19rrh1gf5k.swf-albumId=220185300-tvId=220185300-isPurchase=0-cnId=21
+http://player.video.qiyi.com/38c9fb212bde4215a889780d1c99a26e/0/0/ae4352735871b5c8.swf-albumId=424141-tvId=511157-isPurchase=0-cnId=21
+http://player.video.qiyi.com/02c6f70e6474a31742ae49721a0e4392/0/0/v_19rrhch0mw.swf-albumId=217684500-tvId=217684500-isPurchase=0-cnId=21
+http://player.video.qiyi.com/130ca2d6f812edc4699c11dfc331507e/0/0/v_19rrh1jxwk.swf-albumId=218120200-tvId=218120200-isPurchase=0-cnId=21

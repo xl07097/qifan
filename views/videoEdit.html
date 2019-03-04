@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/css/commonFont.css" type="text/css">
+    <link rel="stylesheet" href="/css/public.css" type="text/css">
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/publicCommon.js"></script>
+    <script src="/js/videoEdit.js"></script>
+</head>
+<body>
+<%- include('./header.html')%>
+<div class="publicHome">
+    <div class="selectPublic">
+        <h2 class="selectCook">编辑视频</h2>
+    </div>
+    <form id="form5">
+        <div class="publicContent" data-id="<%= videoList.video_id%>">
+            <div class="titleContent">
+                <p class="titleName">视频标题</p>
+                <input type="text" class="contentInput" value="<%= videoList.video_name%>" placeholder="视频名称" name="title">
+            </div>
+            <div class="videoContent">
+                <p class="imgP">视频封面</p>
+                <div class="videoloadImg">
+                    <img src="/video/videoIMG/<%= videoList.video_img%>" id="img0">
+                </div>
+                <input type="file" name="file1" id="imgBtn">
+                <p class="videoP">视频文件</p>
+                <input type="file" name="file2" value="/video/video/<%= videoList.video_src%>" id="videoFile">
+            </div>
+        </div>
+        <div class="buttonPublic">
+            <input type="button" class="public" id="editVideo" value="编辑">
+        </div>
+    </form>
+</div>
+<%- include('./footer.html')%>
+</body>
+</html>

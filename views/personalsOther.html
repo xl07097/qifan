@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+    <link href="/css/personal.css" rel="stylesheet">
+    <link href="/css/personalCook.css" rel="stylesheet">
+    <link href="/css/fenye.css" rel="stylesheet">
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+
+    <script type="text/javascript" src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/personal.js"></script>
+    <script src="/js/personalOther.js"></script>
+
+</head>
+<body>
+<%- include('./header.html')%>
+<div class="personal">
+    <div class="head">
+        <div class="h-user">
+            <% personalinfo.forEach(function(item){%>
+            <div class="h-avatar" data-id="<%= item.user_id%>">
+                <img id="h-avatar" src="/images/<%= item.user_portart%>">
+            </div><!--头像-->
+            <div class="h-sign">
+                    <% personalinfo.forEach(function(item){%>
+                    <div class="a-2-part2">
+                        <h1><%= item.user_name%></h1>
+                        <% if(item.user_sex == "女"){%>
+                        <img src="/images/icon/nv.png">
+                        <% }%>
+                        <% if(item.user_sex == "男"){%>
+                        <img src="/images/icon/nan.png">
+                        <% }%>
+
+                        <div class="personalSign">个性签名：<%=item.user_sign%></div>
+                        <ul class="focus">
+                            <li>
+                                <a href="#" id="otherFocus"><%= focus.length%></a>
+                                关注
+                            </li>
+                            <li>
+                                <a href="#" id="userCollect"><%= collect.length%></a>
+                                收藏
+                            </li>
+                        </ul>
+                        <button class="focBtn" data-id="<%= item.user_id%>">+关注</button>
+                    </div>
+                    <% })%>
+            </div>
+            <% })%>
+        </div>
+
+    </div>
+    <div class="nav">
+        <div class="n-inner">
+            <a class="n-btn" id="num-a" href="#">
+                <span class="n-icon n-a-icon"></span>
+                <span class="n-text">主页</span>
+            </a>
+            <a class="n-btn" id="num-b" href="#">
+                <span class="n-icon n-b-icon"></span>
+                <span class="n-text">视频</span>
+            </a>
+            <a class="n-btn" id="num-c" href="#">
+                <span class="n-icon n-c-icon"></span>
+                <span class="n-text">菜谱</span>
+            </a>
+            <a class="n-btn" id="num-d" href="#">
+                <span class="n-icon n-d-icon"></span>
+                <span class="n-text">话题</span>
+            </a>
+        </div>
+    </div>
+    <div id="page-index" class="page">
+        <div class="col-2">
+            <div class="col-2-head">
+                <div id="col-2-title" class="n-btn">
+                    <span>菜谱中心</span>
+                </div>
+                <div id="col-2-menu">
+                    <a href="#">菜谱投稿</a>
+                    <a href="#">投稿管理</a>
+                </div>
+                <div class="col-2-pub">
+                    <h3>通知栏</h3>
+                    <div id="col-2-text">
+                        <img src="/images/tongzhi.jpg">
+                        <div>
+                            <h3>一秒置身韩剧、日剧</h3>
+                            <span>时间:2017年1月10日-2017年1月30日</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1">
+            <div class="section-i-a">
+                <div class="i-a-2">
+                    <% personalinfo.forEach(function(item){%>
+
+                    <div class="a-2-part3">
+                        <div class="mesBox">
+                            <img src="/images/icon/name.png">
+                            昵称：<h3 class="userName"><%= item.user_name%></h3>
+                        </div>
+                        <div class="mesBox">
+                            <img src="/images/icon/sex.png">
+                            性别：<h3 class="userSex"><%= item.user_sex%></h3>
+                        </div>
+                        <div class="mesBox">
+                            <img src="/images/icon/tele.png">
+                            联系方式：<h3 class="userConnect"><%= item.user_tele%></h3>
+                        </div>
+                        <div class="mesBox">
+                            <img src="/images/icon/birth.png">
+                            生日：<h3 class="userBirth"><%= item.user_birth%></h3>
+                        </div>
+                        <div class="mesBox">
+                            <img src="/images/icon/mail.png">
+                            邮件：<h3 class="userEmail"><%= item.user_email%></h3>
+                        </div>
+
+                    </div>
+                    <% })%>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page-video" class="page">
+        <div class="vlist">
+            <div class="clearF">
+                <div id="personal_video">
+                    <% personalvideo.forEach(function(item){%>
+                    <div class="item"  data-id="<%= item.video_id%>">
+                        <div class="itemV">
+                            <a href="/video/detail?id=<%= item.video_id%>" target="_blank">
+                                <img src="/video/videoIMG/<%= item.video_img %>">
+                            </a>
+                            <div class="cookMess">
+                                <a href="/video/detail?id=<%= item.video_id%>" target="_blank">
+                                    <h4 class="itemV-user"> <%= item.video_name %></h4>
+                                </a>
+                                <span><%= item.video_collects %>收藏</span>
+                                <span><%= item.video_comments %>评论</span>
+                                <p>发布于 <%= item.video_time.toLocaleDateString()%></p>
+                            </div>
+                        </div>
+                    </div>
+                    <% })%>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="page-forum" class="page">
+        <div class="clist">
+            <div class="clearFloat">
+                <% personalcook.forEach(function(item){ %>
+                <div class="cookList" data-id="<%= item.cook_id%>">
+                    <div class="itemC">
+                        <a href="/cook/detail?id=<%= item.cook_id%>" target="_blank">
+                            <img src="/images/<%= item.cook_images%>" alt="">
+                        </a>
+                        <div class="cookMess">
+                            <a href="/cook/detail?id=<%= item.cook_id%>" target="_blank">
+                                <h4 class="itemC-user" title="<%= item.cook_name %>"><%= item.cook_name %></h4>
+                            </a>
+                            <span><%= item.cook_likes%>收藏</span>
+                            <span><%= item.cook_collects%>评论</span>
+                            <p class="cookDate"><%= item.cook_date%></p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+
+        </div>
+    </div>
+    <div id="page-focus" class="page">
+
+    </div>
+    <div id="page-collect" class="page">
+
+    </div>
+</div>
+<%- include('./footer.html')%>
+</body>
+</html>

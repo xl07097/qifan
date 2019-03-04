@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/css/commonFont.css" type="text/css">
+    <link rel="stylesheet" href="/css/cook.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/cook.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+</head>
+<body>
+<%- include('./header.html')%>
+<div class="cookBox">
+    <div class="cookUl">
+        <% for(var i=0; i < cooks_bigName.length ; i++){ %>
+            <div class="cookMain">
+                <p>
+                    <%= cooks_bigName[i].bigtype_name%>
+                </p>
+                <% for(var j=0; j < cooks_smallName.length ; j++){%>
+                     <% if(cooks_bigName[i].bigtype_id == cooks_smallName[j][0].bigtype_id){%>
+                         <% for(var k=0;k < cooks_smallName[j].length ; k++){%>
+                              <div class="menuMain" data-id="<%= cooks_smallName[j][k].smalltype_id%>"><%= cooks_smallName[j][k].smallType_name%></div>
+                         <% }%>
+                     <% }%>
+                <%}%>
+            </div>
+        <% }%>
+    </div>
+
+    <div class="cookRight">
+        <div class="rightList">
+            <ul class="rightSort">
+                <li class="sortWay sortSelected" data-id="0">热门</li>
+                <li class="sortWay sortUnSelected" data-id="1">精选</li>
+                <li class="sortWay sortUnSelected" data-id="2">最新</li>
+            </ul>
+        </div>
+        <div class="row" id="row">
+            <% cooks_list.forEach(function(item){%>
+            <div class="thumbnail jc" data-id="<%= item.smalltype_id%>">
+                <a href="/cook/detail?id=<%= item.cook_id%>" target="_blank"><img src="/images/<%= item.cook_images%>" alt="..."></a>
+                <div class="caption">
+                    <div class="portart">
+                        <a href="/personalOther?id=<%= item.user_id%>" target="_blank"><img src="/images/<%= item.user_portart%>"></a>
+                    </div>
+                    <a href="/cook/detail?id=<%= item.cook_id%>" target="_blank" ><h4><%= item.cook_name%></h4></a>
+                    <span>by</span> <p><a href="/personalOther?id=<%= item.user_id%>" target="_blank"><%= item.user_name%></a></p><!--
+                    --><p class="list_likes"><%= item.cook_likes%>点赞</p><!--
+                    --><p class="list_likes"><%= item.cook_collects%>收藏</p><!--
+                    --><p class="list_date">于<%= item.cook_date%>发布</p>
+                </div>
+            </div>
+            <% })%>
+
+        </div>
+    </div>
+</div>
+<%- include('./footer.html')%>
+</body>
+</html>

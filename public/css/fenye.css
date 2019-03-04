@@ -1,0 +1,56 @@
+/*分页按钮*/
+.cookBtn{
+    width: 100%;
+    height: auto;
+    display: block;
+    /*float: right;*/
+}
+
+.jsShow{
+    display: block;
+}
+.jsHide{
+    display:none ;
+}
+
+button{
+    padding:4px 7px ;
+    margin-left: 5px;
+}
+.menuBtnUp,.menuBtnNum,.menuBtnPoint,.menuBtnDown{
+    border: 1px solid #12937C;
+    color: #12937C;
+    background-color: white;
+    border-radius: 3px;
+    /*display: block;*/
+    cursor: pointer;
+}
+.pointBtn{
+    color: #12937C;
+    margin-left: 5px;
+}
+.clickBtn{
+    border: 1px solid #12937C;
+    background-color: #12937C;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menBtn{
+    width: 480px;
+    /*height: 27px;*/
+    position: relative;
+    left: 250px;
+}
+.menuBtnPoint{
+    border: none;
+    padding: 0px;
+}
+.cookBtn span{
+    font-size: 14px;
+}
+.cookBtn input{
+    width: 40px;
+    height: 20px;
+}

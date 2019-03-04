@@ -1,0 +1,249 @@
+
+.commentArea{
+    width: 648px;
+    height: auto;
+    margin: auto;
+}
+.commentArea .block{
+    height: auto;
+    padding-right: 20px;
+    /*position: relative;*/
+    text-align: right;
+    color: #000;
+    font-size: 1.5em;
+    /*line-height: 40px;*/
+}
+.block img{
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+
+.cbox #add{
+    width: inherit;
+    height: auto;
+}
+/*=================================圆形登录效果。勿动！=================================*/
+#add .login_block{
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+#add .login{
+    width: 40px;
+    height: 40px;
+    border-radius: 42px;
+    border: 1px solid #12937C;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    font-size: 14px;
+    color: #12937C;
+    text-align: center;
+    line-height: 42px!important;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    cursor: pointer;
+    background: 0 0;
+}
+#Rlogin img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+
+}
+/*================遮盖直线条蒙版===============*/
+.bord{
+    width: 40px;
+    height: 10px;
+    background-color: #ffffff;
+    /*border-radius: 48px;*/
+    /*border: 1px solid orange;*/
+    position: absolute;
+    bottom: -8px;
+    left: 16px;
+}
+/*====================大圆====================*/
+.bord .line{
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 54px;
+    border: 1px solid #12937C;
+    position: absolute;
+    bottom: -2px;
+    left: -7px;
+}
+/*==============遮盖部分圆，形成弧线===========*/
+.bord .cover_line{
+    width: 56px;
+    height: 46px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom:8px;
+    left: -7px;
+}
+/*==============================写评论框==============================*/
+.cbox #add{}
+.cbox .post_block{
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+    border: 1px solid #12937C;
+}
+#form1 textarea{
+    width: 640px;
+    height: 132px;
+    box-sizing: border-box;
+    border: none;
+    margin: 3px 3px 0px 3px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    outline: none;
+}
+#form1 textarea:focus{
+    border:none;
+}
+/*发表评论按钮*/
+.btnline #cmtPost{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #12937C;
+    color: #ffffff;
+    border: none;
+    font-family: 黑体;
+    font-size: 16px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    cursor: pointer;
+}
+/*==============================emoji、发表按钮行==============================*/
+#add .btnline{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+/*====================左边（emoji图片）====================*/
+.btnline .left{
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+.left .emoji{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/*====================评论 列表标头====================*/
+.cbox .com_list_outlook{
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+/*=================评论 字=================*/
+.com_list_outlook .com_list_style{
+    float: left;
+    width: 68px;
+    height: 29px;
+    border-radius: 7px 7px 0px 0px;
+    text-align: center;
+    color: #12937C;
+    font-size: 16px;
+    border: 1px solid #12937C;
+    line-height: 30px!important;
+    font-family: "Microsoft YaHei";
+    position: relative;
+}
+/*=========遮盖底部线条=========*/
+.com_list_style .com_list_style_bord{
+    display: block;
+    width: 70px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -1px;
+}
+/*=================评论 直线=================*/
+.com_list_outlook .com_list_line{
+    width: 584px;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #12937C;
+}
+/*==============================评论列表#clist==============================*/
+#clist{
+    width: 100%;
+    height: auto;
+}
+/*单个评论单元*/
+#clist  .citem{
+    width: inherit;
+    height: 121px;
+    padding: 20px 0px 10px 0px;
+    border-bottom: 1px dashed lightgray;
+}
+/*评论信息*/
+.citem ul.cmt_info{
+    width: inherit;
+    height: 90px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+/*头像*/
+ul.cmt_info .portart{
+    width: 80px;
+    height: inherit;
+    float: left;
+    text-align: center;
+}
+.portart img{
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    /*margin-top: 10px;*/
+}
+/*评论信息上部*/
+ul.cmt_info .cmt_content{
+    width: 568px;
+    height: inherit;
+    float: left;
+}
+.cmt_content p.cmt_video{
+    margin-top: 5px;
+}
+/*评论人*/
+.cmt_content span.cmt_user{
+    font-family: 'Microsoft Yahei', '宋体', Helvetica Neue, Helvetica, Arial, Sans-serif;
+    font-size: 14px;
+    color: #12937C;
+}
+/*时间*/
+.cmt_content span.cmt_time{
+    font-size: 14px;
+    color: gray;
+}
+/*======================分页input框==========================*/
+.skipText{
+    width: 40px;
+    height: 22px;
+}
+.commentBtn{
+    margin: 14px auto;
+    margin-bottom: 0px;
+}
+.commentBtn .menBtn{
+    width: inherit;
+    text-align: center;
+    position: relative;
+    left: 0px;
+}

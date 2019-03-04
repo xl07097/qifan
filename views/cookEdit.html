@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/css/commonFont.css" type="text/css">
+    <link rel="stylesheet" href="/css/public.css" type="text/css">
+    <link rel="stylesheet" href="/css/cookEdit.css" type="text/css">
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/cookEdit.js"></script>
+
+
+</head>
+<body>
+<%- include('./header.html')%>
+<div class="publicHome">
+    <div class="selectPublic">
+        <h2 class="selectCook">编辑菜谱</h2>
+    </div>
+    <form id="form4">
+        <div class="publicContent" data-id="<%= cookContent.cook_id%>">
+            <div class="contentTitle">
+                <input type="text" class="contentInput" name="title" value="<%= cookContent.cook_name%>" placeholder="菜谱名称">
+                <div class="selBox">
+                    <select id="sel1">
+                        <% cookType.forEach(function(item){%>
+                        <option data-id="cook<%= item.bigtype_id%>"><%= item.bigtype_name%></option>
+                        <%})%>
+                    </select>
+                    <% for(var i = 0 ;i < cookType.length ; i++){%>
+                    <% for(var j = 0 ; j < smallType.length ; j++){%>
+                    <% if( cookType[i].bigtype_id == smallType[j][0].bigtype_id){%>
+                    <select class="selType" data-id="cook<%= cookType[i].bigtype_id%>">
+                        <% for(var k=0;k < smallType[j].length ; k++){%>
+                        <option class="smallType" data-id="<%= smallType[j][k].smalltype_id%>"><%= smallType[j][k].smallType_name%></option>
+                        <% }%>
+                    </select>
+                    <% }%>
+                    <% }%>
+                    <% }%>
+                </div>
+            </div>
+            <div class="editContent">
+                <div class="editImg" id="editImg">
+                    <img src="/images/<%= cookContent.cook_images%>" id="img0" >
+                </div>
+                <input type="file" name="file1" id="fileBtn" style="display: none">
+                <div class="editBox">
+                    <div class="editSelect">
+                        <select class="cookingLevel" name="difficult">
+                            <option><%= cookContent.cook_difficulty%></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                        <select class="cookingTime" name="cookTime">
+                            <option><%= cookContent.cook_time%></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </div>
+                    <textarea class="editStory" name="story" value="<%= cookContent.cook_content%>" placeholder="这道菜背后的故事~(选填)"></textarea>
+                </div>
+
+            </div>
+            <div class="addDosage">
+                <div class="dosageLeft" id="mater">
+                    <div class="dosageText">
+                        <span class="liao">主料</span>
+                        <span class="liang">用量</span>
+                    </div>
+                    <% cookContent.material.forEach(function(item){%>
+                    <div class="dosageAddMore" data-id="<%= item.material_id%>">
+                        <input type="text" class="dosageInputLL matName" value="<%= item.material_name%>"><!--
+                        --><input type="text" class="dosageInputRR matNum" value="<%= item.material_num%>"><!--
+                        --><img src="/images/ic_mes.png" class="dosImg">
+                    </div>
+                    <% })%>
+                    <div class='addMore'>
+                        <a  class="addOne">增加一栏</a>
+                    </div>
+                </div>
+
+                <div class="dosageRight" id="submater">
+                    <div class="dosageText">
+                        <span class="liao">辅料</span>
+                        <span class="liang">用量</span>
+                    </div>
+                    <% cookContent.submaterial.forEach(function(item){%>
+                    <div class="dosageAddMore" data-id="<%= item.submaterial_id%>">
+                        <input type="text" class="dosageInputLL subName" value="<%= item.submaterial_name%>"><!--
+                        --><input type="text" class="dosageInputRR subNum" value="<%= item.submaterial_num%>"><!--
+                        --><img src="/images/ic_mes.png" class="dosImg">
+                    </div>
+                    <% })%>
+                    <div class='addMore'>
+                        <a  class="addOne">增加一栏</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="addStep">
+                <h3 class="stepTitle">步骤</h3>
+                <ul class="stepBox">
+                    <% for(var i = 0 ; i < cookContent.step.length ; i++){%>
+                    <li class="stepLi" data-id="<%= i+1%>" id="<%= cookContent.step[i].step_id%>">
+                        <div class="stepUpload">
+                            <img src="/images/<%= cookContent.step[i].step_img%>" id="img<%= i+1%>">
+                        </div>
+                        <input type="file" class="editStep" style="display: none" name="editFile<%= i+1%>" id="editStep<%= i+1%>">
+                        <input type="text"  class="stepNum" value="<%= i+1%>">
+                        <textarea class="stepText"><%= cookContent.step[i].step_content%></textarea>
+                        <div class="imgDiv" data-id="<%= i+1%>">
+                            <img src="/images/publicHtml/up.png" class="upImg">
+                            <img src="/images/publicHtml/down.png" class="downImg">
+                            <img src="/images/publicHtml/delete.png" class="deleteImg">
+                        </div>
+                    </li>
+                    <% } %>
+                </ul>
+                <div class="addMore">
+                    <a class="addOneMore">增加一步</a>
+                </div>
+            </div>
+        </div>
+        <div class="buttonPublic">
+            <input type="button" class="public" id="editCook" value="编辑">
+        </div>
+    </form>
+</div>
+<%- include('./footer.html')%>
+</body>
+</html>

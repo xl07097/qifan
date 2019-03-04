@@ -1,0 +1,411 @@
+.publicHome{
+    width: 802px;
+    height: auto;
+    margin: 0px auto;
+
+}
+.selectPublic{
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 10px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.selectPublic h2{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.selected{
+    color: #12937C;
+}
+
+.publicContent{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 5px 40px 0px;
+    box-shadow: 0px 1px 3px #DADADA;
+}
+.contentTitle{
+    width: 100%;
+    height: 85px;
+    padding: 20px 0px ;
+    border-bottom: 1px solid #DEDED3;
+}
+.contentInput{
+    width: 702px;
+    height: 25px;
+    padding: 10px;
+    border: 1px solid #DEDED3;
+    border-radius: 5px;
+    color: #999999;
+    /*margin-bottom: 10px;*/
+}
+.addContent{
+    width: 100%;
+    height: auto;
+    padding: 20px 0px ;
+    border-bottom: 1px solid #DEDED3;
+}
+.uploadImg,.videoloadImg{
+    width: 670px;
+    height: 470px;
+    /*background-image: url('/images/publicHtml/bg_jiaic.jpg');*/
+    /*background-color: #C7B8A3;*/
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 470px;
+}
+.uploadImg img,.videoloadImg img{
+    width: 670px;
+    height:470px;
+}
+.uploadImg p {
+    height: 20px;
+    color: white;
+}
+.cookingSelect{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 20px 0px 10px;
+}
+.cookingLevel,.cookingTime{
+    width: 95px;
+    height: 23px;
+    padding: 2px;
+    color: #333333;
+    border: 1px solid #DEDED3;
+    margin-left: 6px;
+}
+.cookingStory{
+    width: 100%;
+    height: 124px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #DEDED3;
+    border-radius: 4px;
+    color: #999999;
+}
+
+.addDosage{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    padding: 20px 0px;
+    box-sizing: border-box;
+}
+.dosageLeft,.dosageRight{
+    width: 346px;
+    height: auto;
+    display: inline-block;
+    background-color: #F4F0EC;
+    padding-left: 20px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #333333;
+}
+.dosageLeft{
+    margin-right: 40px;
+}
+/*.dosageRight{*/
+    /*float: right;*/
+/*}*/
+
+.dosageText{
+    width: 100%;
+    height: 16px;
+    padding: 15px 0px 10px;
+    line-height: 16px;
+}
+.liao{
+    width: 230px;
+    height: auto;
+    float: left;
+}
+
+.dosageAdd,.dosageAddMore{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+.dosageInputL,.dosageInputLL{
+    width: 230px;
+}
+.dosageInputLL,.dosageInputRR{
+    margin-right: 6px;
+}
+.dosageInputR,.dosageInputRR{
+    width: 64px;
+}
+.dosageInputL,.dosageInputR,.dosageInputLL,.dosageInputRR{
+    box-sizing: border-box;
+    height: 34px;
+    padding: 5px 0px 5px 10px;
+    border: 1px solid #DEDED3;
+    border-radius: 3px;
+    color: #999999;
+}
+.addMore{
+    width: 100%;
+    height: 33px;
+    box-sizing: border-box;
+    padding: 5px 27px 12px 0px;
+}
+.addOne,.addOneMore,.addImg{
+    text-decoration: none;
+    color: #6FBFB1;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+}
+.addOne:hover,.addOneMore:hover,.addImg:hover{
+    text-decoration: underline;
+    color: #ED585C;
+}
+.dosImg{
+    cursor: pointer;
+}
+
+
+.addStep{
+    width: 100%;
+    height: auto;
+    padding: 15px 0px;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+.stepTitle{
+    width: 100%;
+    height: 36px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+.stepBox{
+    list-style-type: none;
+}
+.stepLi{
+    width: 100%;
+    height: 100px;
+    margin-bottom: 13px;
+}
+.stepDiv,.stepUpload{
+    width: 150px;
+    height: 100px;
+    background-image: url('/images/publicHtml/bz.jpg');
+    /*background-color: #C6B7A4;*/
+    border-radius: 3px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin-right: 20px;
+    float: left;
+}
+.stepDiv img,.stepUpload img{
+    width: 150px;
+    height: 100px;
+}
+.stepNum{
+    width: 35px;
+    height: 100px;
+    line-height: 40px;
+    background-color: #6FBFB1;
+    color: white;
+    display: inline-block;
+    border: none;
+    text-align: center;
+    border-radius: 3px 0px 0px 3px;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+}
+.stepText{
+    width: 487px;
+    height: 98px;
+    border-radius: 0px 3px 3px 0px;
+}
+
+.buttonPublic{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.public{
+    width: 140px;
+    height: 50px;
+    background-color: #6FBFB1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.selBox{
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    display: inline-flex;
+}
+#sel1{
+    margin-right: 10px;
+}
+.selHide{
+    display: none;
+}
+.selShow{
+    display: block;
+}
+
+
+#form1{
+    display: block;
+}
+#form2,#form3{
+    display: none;
+}
+.publicContent p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.titleContent{
+    width: 100%;
+    height: 85px;
+    padding: 20px 0px ;
+}
+.videoContent{
+    width: 100%;
+    height: auto;
+    padding-bottom:30px;
+}
+.videoP{
+    margin-top: 20px;
+}
+
+.topicContent{
+    margin-bottom: 20px;
+}
+.topicText{
+    width: 100%;
+    height: 124px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #DEDED3;
+    border-radius: 4px;
+    color: #999999;
+}
+
+.topicImg{
+    padding-bottom: 30px;
+}
+
+.fileBox{
+    width: 100%;
+    height: auto;
+    padding: 20px 0px 0px 0px ;
+    border-radius: 4px;
+    border: 1px dashed #ddd;
+    margin-bottom: 10px;
+}
+.loadDiv{
+    width: 214px;
+    height: 214px;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 0 #a2958a;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0px 0px 20px 20px;
+    position: relative;
+}
+.deleteBtn{
+    width: 20px;
+    height: 20px;
+    background: url('/images/publicHtml/tD.png') no-repeat;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+.loadDiv:hover .deleteBtn{
+    display: block;
+}
+.loadDiv img{
+    width: 194px;
+    height: 194px;
+    background-image: url('/images/publicHtml/topicLoad.png');
+}
+.fileBox input{
+    display: none;
+}
+
+
+.publicHome{
+    width: 802px;
+    height: auto;
+    margin: 0px auto;
+    padding:20px 0px 30px;
+}
+.successHome{
+    width: 100%;
+    height: 300px;
+    margin: 30px auto;
+    background-color: white;
+    box-sizing: border-box;
+    padding:40px;
+    box-shadow: 0px 1px 3px #DADADA;
+    position: relative;
+}
+.successDiv{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top:30px;
+}
+.successDiv img{
+    width: 50px;
+    height: 50px;
+}
+.successDiv h1{
+    width: 150px;
+    display: inline-block;
+    position: relative;
+    top:-12px;
+}
+.seeDiv{
+    text-align: center;
+    margin-top: 40px;
+}
+.seeDiv a{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.imgDiv{
+    width: 14px;
+    height: 100px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+.imgDiv img{
+    margin-top: 13px;
+}
+.stepLi:hover .imgDiv{
+    display: block;
+}
+
+#imgBtn{
+    display: none;
+}
+
+

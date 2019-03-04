@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %>的做法视频</title>
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <link rel="stylesheet" href="/css/MycommonCSS.css">
+    <link rel="stylesheet" href="/css/videoDetail.css">
+    <link rel="stylesheet" href="/css/comment.css">
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/bootstrap-3.3.0-dist/dist/js/bootstrap.min.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/videoDetail.js"></script>
+    <script src="/js/sweetalert.min.js"></script>
+</head>
+<body>
+<%- include('./header.html')%>
+<div id="pageContent">
+
+    <p class="topblock">
+        您的位置：
+        <span class="top">
+            <a href="/">首页 &gt;</a>
+            <a href="/video">视频中心&gt;</a>
+            <a><%= video.video_name %></a>
+        </span>
+    </p>
+    <div class="wropper">
+        <div class="w700">
+            <div id="video-info" data-id="<%= video.video_id %>" data-type="video">
+                <h2 class="v_tit"><%= video.video_name %></h2>
+                <span class="v_info">
+                 &nbsp;&nbsp;7饭菜谱网让你详细了解“<%= video.video_name %>”怎么做好吃，以及“<%= video.video_name %>”的家常做法视频，更有“<%= video.video_name %>”的做法视频，让您简单快速的学会怎么做“<%= video.video_name %>”的详细步骤。
+            </span>
+                <div class="v_video">
+                    <video width="600" height="400" controls="controls" id="videowindow" poster="/video/videoIMG/<%= video.video_img %>">
+                        <source src="/video/video/<%= video.video_src%>" type="video/ogg">
+                    </video>
+                </div>
+                <div class="v_action">
+                    <div class="falisc">
+                        <span id="like" class="falisc-left"><b class="like-num"><%= video.video_likes %></b>点赞</span>
+                        <span id="collect-count" class="falisc-left"><b class="collect-num"><%= video.video_collects %></b>收藏</span>
+                        <span class="falisc-right">
+						<a class="collect icon-1" data-id="<%= video.video_id %>" data-type="video">收藏</a>
+					</span>
+                        <span class="falisc-right">
+						<a class="like icon-1" data-id="<%= video.video_id %>" data-type="video">点赞</a>
+					</span>
+                    </div>
+                    <div class="auth">
+                        <img src="/images/<%= video.user_portart %>" alt="<%= video.user_name%>" class="image-link">
+                        <h4>
+                            <a href="/personalOther?id=<%= video.t_user_user_id %>"><%= video.user_name %></a>
+                            <span class="post-date">发布于&nbsp;<%= video.video_time.toLocaleDateString() %></span>
+                        </h4>
+                        <p class="focus">
+                            <span class="foc f1" data-id="<%= video.t_user_user_id %>">关注</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--评论区-->
+            <%- include('./common/comment.html',{commentlist:commentlist,commentType:'video',id:video.video_id}) %>
+        </div>
+        <div class="w300">
+            <div class="right_tit">
+                <h2 class="hot">
+                    热门视频
+                    <p class="right_tit_tag">HOT&nbsp;&nbsp;VIDEO</p>
+                </h2>
+            </div>
+            <div class="rec_list">
+                <% hotlist.forEach(function(item){ %>
+
+                <div class="rec_item">
+                    <a href="/video/detail?id=<%= item.video_id %>">
+                        <img src="/video/videoIMG/<%= item.video_img %>" alt="<%= item.video_name %>" class="hotimg">
+                        <span class="glass"></span>
+                        <span class="play"></span>
+                        <h3 class="rec_item_name"> <%= item.video_name %> </h3>
+                    </a>
+                </div>
+
+                <% }) %>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<%- include('./footer.html')%>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* 焦点图 */
+.imgCarousel{
+	width: 1002px;
+	height: 420px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+#show {
+	position: relative;
+	height: 420px;
+	width: 802px;
+	margin: 0 auto;
+}
+#show a {
+	left: 100px;
+	float: left;
+	display: inline;
+}
+#show .img {
+	position: absolute;
+
+	width: 802px;
+	height: 420px;
+	overflow: hidden
+}
+#show .img span {
+	position: absolute;
+	width: 12000px;
+	display: block
+}
+#show .img span img{
+	width: 802px;
+	height: 420px;
+}
+#show .btns {
+	z-index: 10;
+	position: absolute;
+	width: 802px
+}
+#show .btns b {
+	position: absolute;
+	width: 100px;
+	display: block;
+	height: 14px;
+	overflow: hidden;
+	top: 395px;
+	left: 50%
+}
+#show .btns b i {
+	width: 10px;
+	background: #6FBFB1;
+	float: left;
+	height: 10px;
+	font-size: 0px;
+	overflow: hidden;
+	cursor: pointer;
+	margin-right: 6px;
+	border: #6FBFB1 2px solid;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px
+}
+#show .btns b i:hover {
+	background: #C6C6C6;
+}
+#show .btns b i.on {
+	background: white;
+	cursor: default
+}
+#show .btns b i.on:hover {
+	background: white;
+	cursor: default
+}
+#show .btns s {
+	position: absolute;
+	WIDTH: 60px;
+	opacity: 0.8;
+	height: 80px;
+	overflow: hidden;
+	top: 180px;
+	cursor: pointer
+}
+#show .btns s i {
+	position: absolute;
+	width: 60px;
+	background: url('/images/btn_show.png');
+	height: 160px;
+	/*_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="/images/btn_show.png");*/
+	/*_background: none;*/
+	z-index: 1999;
+}
+#show .btns s.prev {
+	left: 0px
+}
+#show .btns s.prev I {
+	top: -80px
+}
+#show .btns s.next {
+	right: 0px;
+}
+/*.show-hover#show .btns s {*/
+	/*opacity: 1;*/
+/*}*/
+/*.img:hover #show .btns s{*/
+	/*opacity: 1;*/
+/*}*/
+
+.masks {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	height: 420px;
+	position: absolute;
+	background: #000;
+	overflow: hidden
+}

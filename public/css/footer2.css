@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+}
+footer{
+    width: 100%;
+    /*border: 1px solid red;*/
+    background: #F2F2F2;
+    color:#12937C;
+}
+section{
+    width: 1002px;
+    margin: 0 auto;
+    padding: 15px 0;
+    /*border: 1px solid blue;*/
+
+}
+.footer-logo{
+    display: inline-block;
+    width: 40%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+nav img{
+    width: 220.5px;
+    height: 70.5px;
+}
+nav.footer-content,
+nav.footer-service,
+nav.footer-link{
+    display: inline-block;
+    width: 15%;
+}
+nav dt,
+nav dd{
+    margin:0 0 10px 0;
+    padding: 0;
+    font-size: 12px;
+}
+nav dt{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+    <link href="/css/mesUpdate.css" type="text/css" rel="stylesheet">
+    <link href="/css/commonFont.css" type="text/css" rel="stylesheet">
+    <script src="/js/jquery-3.1.1.js"></script>
+
+    <script src="/js/base64.js"></script>
+    <script src="/js/mesUpdate.js"></script>
+</head>
+<body>
+<%- include('./header.html')%>
+
+<div class="mess">
+    <div class="messHeader">
+        <ul class="messUl">
+            <li class="ls" id="mes">基本信息</li>
+            <li id="paw">密码修改</li>
+        </ul>
+    </div>
+    <div class="perfe" data-id="<%= mess.user_id%>">
+        <form id="form7">
+            <div class="itpr">
+                <label>&nbsp;&nbsp;昵称:</label>
+                <input type="text" class="itName" name="name" value="<%= mess.user_name%>" id="itName">
+            </div>
+            <div class="itpr">
+                <label>&nbsp;&nbsp;性别:</label>
+                <% if( mess.user_sex == "女"){%>
+                    <input type="radio" name="sex" value="男" class="itSex">男
+                    <input type="radio" name="sex" value="女" class="itSex" checked>女
+                <% }%>
+                <% if( mess.user_sex == "男"){%>
+                <input type="radio" name="sex" value="男" class="itSex" checked>男
+                <input type="radio" name="sex" value="女" class="itSex">女
+                <% }%>
+
+            </div>
+            <div class="itpr">
+                <label>联系方式:</label>
+                <input type="text" name="tele"  class="itName" value="<%= mess.user_tele%>" id="itTele">
+            </div>
+            <div class="itpr" id="birthBox">
+                <label>&nbsp;&nbsp;生日:</label>
+                <input type="text" class="sang_Calender" id="birth" value="<%= mess.user_birth%>"/>
+                <span></span>
+            </div>
+            <div class="itpr">
+                <label>&nbsp;&nbsp;邮件:</label>
+                <input type="text" name="email"  class="itName" value="<%= mess.user_email%>" id="itMail">
+            </div>
+            <div class="pmtr">
+                <button id="buttonSave" type="button">保存</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="page-changepwd" class="page">
+        <form id="changeform">
+                <div class="pwdcss">
+                    <label>&nbsp;原始密码：</label>
+                    <input type="password" value="<%= mess.user_password%>" id="OriPwd">
+                </div>
+                <div class="pwdcss">
+                    <label>&nbsp;&nbsp;新密码：</label>
+                    <input type="password" placeholder="请输入密码" id="newPwd">
+                </div>
+                <div class="pwdcss">
+                    <label>确认新密码：</label>
+                    <input type="password" placeholder="请输入密码" id="conPwd">
+                </div>
+            <div class="pmtr" data-id="<%= mess.user_id%>">
+                <button id="buttonChange" type="button">保存</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include('./footer.html')%>
+<script type="text/javascript" src="/js/datetime.js"></script>
+</body>
+</html>

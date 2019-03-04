@@ -1,0 +1,517 @@
+body{
+	margin: 0;
+    background-color: #F8F8F7;
+}
+div#main{
+    position: relative;
+	width: 1002px;
+	margin: 30px auto;
+	/*border: 1px solid red;*/
+}
+p.title{
+    font-size: 12px;
+}
+div.releft{
+	display: inline-block;
+	width: 650px;
+	/*border: 1px solid blue;*/
+}
+div.recinfo{
+	width: 100%;
+	/*border: 1px dashed green;*/
+}
+div.top-image{
+	width: 100%;
+	height: 550px;
+    overflow: hidden;
+}
+div.top-image img{
+	width: 100%;
+    height: 550px;
+}
+h2{
+    margin: 15px 0;
+    font-size: 20px;
+}
+span.cook-des{
+    display: block;
+    padding: 5px 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: Tahoma, Geneva, "Microsoft Yahei";
+}
+div.falisc{
+	position: relative;
+	margin: 10px 0;
+	height: 30px;
+	line-height: 30px;
+}
+div.falisc #like,div.falisc #collect-count{
+    font-size: 14px;
+    margin:0 10px 0 10px;
+}
+div.falisc b{
+    font-size: 28px;
+    margin-right: 3px;
+    color: #FF0000;
+}
+span.falisc-right{
+    position: relative;
+	float: right;
+}
+a.collect,a.like{
+    display: inline-block;
+    margin-right: 10px;
+    width: 80px;
+    height: 32px;
+    background-color: #12937C;
+    color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 3px;
+    line-height: 32px;
+    font-size: 12px;
+    text-indent: 38px;
+    text-decoration: none;
+}
+.icon-1{
+    background: url(/images/starsc.png) no-repeat 13px 4px;
+}
+.icon-2{
+    background: url(/images/starsc.png) no-repeat 10px -31px;
+}
+div.auth{
+	position: relative;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+a.image-link{
+	display: block;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 65px;
+	height: 65px;
+	border-radius: 3px; 
+}
+a.image-link img{
+	width: 100%;
+	height: 100%;
+}
+h4{
+	margin: 0;
+	padding-top: 10px;
+}
+h4 a{
+	margin-left:10px;
+    font-size: 14px;
+}
+.post-date{
+	float: right;
+	margin-right: 20px;
+    font-size: 12px;
+    color: grey;
+}
+.focus{
+    margin: 10px 0 0 0;
+    display: inline-block;
+}
+.foc {
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 0 10px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    cursor: pointer;
+}
+.f1{
+    border: 1px solid #12937C;
+    background: #12937C;
+    color: white;
+}
+div.cookdt{
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #f8f8f8;
+}
+span.cook-time{
+    float: right;
+}
+dl.cook-list{
+    margin: 0;
+    overflow: hidden;
+}
+dl.cook-list dt,dl.cook-list dd{
+    height: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    line-height: 40px;
+    font-size: 14px;
+    border: 1px solid lightgray;
+}
+.cook-list dt{
+    border-bottom: none;
+    background: #ccc;
+}
+dd.item-list{
+    float: left;
+    width: 50%;
+    margin: 0;
+    background-color: #ffffff;
+    color: #666;
+}
+.item-list span:nth-child(2){
+    float: right;
+}
+div.step h3{
+	margin:30px 0 0 20px;
+	font-size: 16px;
+}
+div.stepcont{
+	position:relative;
+	margin: 0 20px;
+	padding: 20px 0;
+	border-bottom: 1px dashed #ccc;
+}
+div.pldc{
+	display: inline-block;
+	margin-right: 15px;
+}
+div.pldc img{
+	width: 200px;
+	height: 200px;
+}
+div.stepcont p{
+	position: absolute;
+	display: inline-block;
+}
+
+div.stepcont p b{
+	font-size: 18px;
+}
+
+/*=========================评论区域样式==================*/
+.commentArea{
+    width: 648px;
+    height: auto;
+}
+.commentArea .block{
+    margin-top: 30px;
+    color: #12937C;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    font-size: 1.5em;
+    line-height: 40px;
+    background-color: #F7F3E8;
+}
+/*=================================圆形登录效果。勿动！=================================*/
+.cbox .login_block{
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+.cbox .login{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #12937C;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    font-size: 14px;
+    color: #12937C;
+    text-align: center;
+    line-height: 42px!important;
+    font-family: "Microsoft Yahei", "微软雅黑";
+    cursor: pointer;
+    background: 0 0;
+}
+a.login img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/*================遮盖直线条蒙版===============*/
+.bord{
+    width: 39px;
+    height: 10px;
+    position: absolute;
+    bottom: -8px;
+    left: 16px;
+    background-color: #f8f8f7;
+}
+/*====================大圆====================*/
+.bord .line{
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 54px;
+    border: 1px solid #12937C;
+    position: absolute;
+    bottom: -2px;
+    left: -7px;
+}
+/*==============遮盖部分圆，形成弧线===========*/
+.bord .cover_line{
+    width: 56px;
+    height: 46px;
+    position: absolute;
+    bottom:8px;
+    left: -7px;
+    background-color: #f8f8f7;
+}
+/*==============================写评论框==============================*/
+.cbox .post_block{
+    width: 100%;
+    height: 140px;
+    border-radius: 10px;
+    border: 1px solid #12937C;
+}
+#comt-comment{
+    width: 630px;
+    height: 120px;
+    margin:8px 0 0 5px; 
+    resize: none;
+    border: none;
+}
+#comt-comment:active{
+	border: none;
+}
+/*==============================emoji、发表按钮行==============================*/
+.cbox .btnline{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+/*====================左边（emoji图片）====================*/
+.btnline .left{
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+.left .emoji{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+}
+/*==============================评论按钮==============================*/
+.cbox button.postBtn{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #12937C;
+    color: #ffffff;
+    border: none;
+    font-family: 黑体;
+    font-size: 16px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    cursor: pointer;
+}
+/*====================评论 列表标头====================*/
+.cbox .com_list_outlook{
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+/*=================评论 字=================*/
+.com_list_outlook .com_list_style{
+    float: left;
+    width: 68px;
+    height: 29px;
+    border-radius: 7px 7px 0px 0px;
+    text-align: center;
+    color: #12937C;
+    font-size: 16px;
+    border: 1px solid #12937C;
+    line-height: 30px!important;
+    font-family: "Microsoft YaHei";
+    position: relative;
+}
+/*=========遮盖底部线条=========*/
+.com_list_style .com_list_style_bord{
+    display: block;
+    width: 70px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -1px;
+}
+/*=================评论 直线=================*/
+.com_list_outlook .com_list_line{
+    width: 580px;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #12937C;
+}
+/*==============================评论列表clist==============================*/
+.clist{
+    width: 100%;
+    overflow: hidden;
+}
+/*单个评论单元*/
+.clist  .citem{
+    width: inherit;
+    height: 60px;
+    padding: 20px 0 10px 0;
+    border-bottom: 1px dashed lightgray;
+}
+/*评论信息*/
+.citem ul.cmt_info{
+    width: inherit;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+/*头像*/
+ul.cmt_info .portart{
+    width: 80px;
+    height: inherit;
+    float: left;
+    text-align: center;
+}
+.portart img{
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    /*margin-top: 10px;*/
+}
+/*评论信息上部*/
+ul.cmt_info .cmt_content{
+    width: 568px;
+    height: inherit;
+    float: left;
+}
+.cmt_content p.content{
+    margin-top: 5px;
+}
+/*评论人*/
+.cmt_content span.cmt_user{
+    font-family: 'Microsoft Yahei', '宋体', Helvetica Neue, Helvetica, Arial, Sans-serif;
+    font-size: 14px;
+    color: #12937C;
+}
+/*时间*/
+.cmt_content span.cmt_time{
+    font-size: 14px;
+    color: gray;
+}
+.jsHide{
+    display:none ;
+}
+.jsShow{
+    display: block;
+}
+.commentBtn{
+    width: 766.5px;
+    height: auto;
+    float: right;
+}
+
+div.commentBtn button{
+    padding:4px 7px ;
+    margin-left: 5px;
+}
+.menuBtnUp,.menuBtnNum,.menuBtnPoint,.menuBtnDown{
+    border: 1px solid #12937C;
+    color: #12937C;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.clickBtn{
+    border: 1px solid #12937C;
+    background-color: #12937C;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menBtn{
+    width: 480px;
+    display: inline-block;
+    position: relative;
+    left: 300px;
+}
+.menuBtnPoint{
+    border: none;
+    padding: 0;
+}
+.commentBtn span{
+    font-size: 14px;
+}
+.commentBtn input{
+    width: 40px;
+    height: 20px;
+}
+
+/*回到顶部*/
+.back-top{
+    display: inline-block;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: url(/images/backtotop_icon.png) 0 0 no-repeat;
+    height: 48px;
+    width: 48px;
+    z-index: 9999;
+}
+
+/*====右边推荐=========*/
+div.reright{
+    position: absolute;
+    right: 2px;
+    display: inline-block;
+    width: 320px;
+    background: #ffffff;
+    box-shadow: 0 0 3px 2px #ccc;
+}
+div.reright a:hover{
+    color: #ED585C;
+    text-decoration: underline;
+}
+div.shxs{
+    margin: 5px 0;
+    position: relative;
+}
+a.recommend-link img{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+div.sdjy{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 200px;
+}
+div.sdjy ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+div.sdjy ul li{
+    padding: 0;
+}
+div.sdjy a{
+    font-size: 14px;
+}
+div.sdjy p{
+    margin: 5px 0;
+    height: 57px;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+

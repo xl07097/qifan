@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/css/MycommonCSS.css">
+    <link rel="stylesheet" href="/css/video.css">
+    <link href="/css/fenye.css" rel="stylesheet">
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/video.js"></script>
+</head>
+<body>
+<%- include('./header.html')%>
+<div id="pageContent">
+
+    <div id="videoList">
+        <% videoList.forEach(function(item){ %>
+        <div class="item_block">
+            <div class="video_item jsShow" >
+                <a href="/video/detail?id=<%= item.video_id %>" target="_blank">
+                    <img src="/video/videoIMG/<%= item.video_img %>" alt="">
+                    <span class="glass"></span>
+                    <span class="play"></span>
+                </a>
+                <div class="info">
+                    <h4 class="video_name"> <%= item.video_name %> </h4>
+                    <div class="by">
+                        by&nbsp;&nbsp;
+                        <div class="author">
+                              <a href="/personalOther?id=<%= item.t_user_user_id%>" target="_blank" class="hrefusername"><%= item.user_name%></a>
+                              <a href="/personalOther?id=<%= item.t_user_user_id%>" target="_blank" class="hrefusername">
+                                  <img src="/images/<%= item.user_portart %>" class="author_img" alt="<%= item.user_name %>">&nbsp;
+                              </a>
+                              <span class="likes" data-id="<%= item.video_id %>">
+                                  <span class="likeCount"><%= item.video_likes %></span>&nbsp;点赞
+                              </span>&nbsp;
+                              <span class="comments">
+                                  <span class="commentCount"><%= item.video_collects %></span>&nbsp;收藏
+                              </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <% }) %>
+
+    </div>
+</div>
+
+<%- include('./footer.html')%>
+</body>
+</html>

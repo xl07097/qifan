@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="/js/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="/css/comment.css">
+    <link href="/css/fenye.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+
+</head>
+<body>
+<div class="commentArea">
+    <!--评论框-->
+    <div class="cbox">
+        <div id="add">
+            <!--圆形登录-->
+            <div class="login_block">
+                <div class="bord">
+                    <span class="line"></span>
+                    <div class="cover_line"></div>
+                </div>
+                <div class="login" id="Rlogin">登陆</div>
+            </div>
+            <form id="form1">
+                <div class="post_block">
+                    <textarea id="areacontent" cols="104" rows="7"></textarea><br>
+                </div>
+                <div class="btnline">
+                    <input type="button" id="cmtPost" value="发表" class="postcomment" data-id="<%= id%>" data-type="video">
+                </div>
+            </form>
+        </div>
+        <!--标头“评论”的效果-->
+        <div class="com_list_outlook">
+            <!--“评论”-->
+            <span class="com_list_style">
+                评论
+                <span class="com_list_style_bord"></span>
+            </span>
+            <!--直线-->
+            <span class="com_list_line"></span>
+        </div>
+    </div>
+
+    <!--评论列表-->
+    <div id="clist">
+        <% commentlist.forEach(function(item){ %>
+        <div class="citem">
+            <ul class="cmt_info">
+                <li class="portart"><img src="/images/<%= item.user_portart %>"></li>
+                <li class="cmt_content">
+                    <span class="cmt_user"><%= item.user_name %></span>&nbsp;&nbsp;
+                    <span class="cmt_time"><%= item.videocomment_time%>&nbsp;<%= item.videocomment_time %></span>
+                    <p class="cmt_video"><%= item.videocomment_content %></p>
+                </li>
+            </ul>
+        </div>
+        <% }) %>
+    </div>
+</div>
+</body>
+</html>

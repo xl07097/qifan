@@ -1,0 +1,135 @@
+body{
+    background-color: #F8F8F7;
+}
+.warp-shell{
+    width: 1002px;
+    margin: 10px auto 0 auto;
+}
+*{
+    box-sizing: border-box;
+}
+.shell-mc{
+    padding: 10px 0 20px 15px;
+}
+div.mgb10 span{
+    font-size: 14px;
+}
+div.item{
+    margin: 0 0 10px 10px;
+}
+.reAllList{
+    width: 663px;
+    overflow: hidden;
+    /*box-shadow: 0 0 2px  #cccccc;*/
+}
+.reAllList ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid lightgrey;
+    background-color: #f4f2eb;
+}
+.reAllList li{
+    overflow: hidden;
+    width: 100%;
+    padding: 15px 10px;
+    border-bottom: 1px solid lightgrey;
+}
+span.img{
+    display: block;
+    width: 120px;
+    float: left;
+    margin-right: 12px;
+}
+span.img img{
+    width: 120px;
+    height: 120px;
+    border: none;
+}
+.text{
+    display: block;
+    float: left;
+    width: 500px;
+}
+p.name{
+    margin: 8px 0;
+    height: 19px;
+    font-size: 14px;
+}
+.postDate{
+    float: right;
+    font-size: 14px;
+    color: gray;
+}
+.info{
+    width: 470px;
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+span.content{
+    display: inline-block;
+    height: 29px;
+    overflow: hidden;
+}
+span.collect,span.comment{
+    font-size: 12px;
+    color: #ddd;
+}
+span.collect,span.comment{
+    padding-left: 10px;
+    border-left: 1px dotted gray;
+}
+span a{
+    font-size: 12px;
+    color: #12937c;
+}
+.jsHide{
+    display:none ;
+}
+.jsShow{
+    display: block;
+}
+div.searchbtn{
+    width: 766.5px;
+    height: auto;
+    float: right;
+    margin: 10px 0;
+}
+
+button{
+    padding:4px 7px ;
+    margin-left: 5px;
+}
+.menuBtnUp,.menuBtnNum,.menuBtnPoint,.menuBtnDown{
+    border: 1px solid #12937c;
+    color: #12937c;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.clickBtn{
+    border: 1px solid #12937c;
+    background-color: #12937c;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menBtn{
+    width: 400px;
+    display: inline-block;
+    position: relative;
+    left: 350px;
+}
+.menuBtnPoint{
+    border: none;
+    padding: 0;
+}
+div.searchbtn span{
+    font-size: 14px;
+}
+.menBtn input{
+    width: 40px;
+    height: 20px;
+}

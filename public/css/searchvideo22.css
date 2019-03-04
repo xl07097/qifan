@@ -1,0 +1,107 @@
+body{
+    background-color: #F8F8F7;
+}
+.main{
+    width: 802px;
+    margin: 10px auto;
+
+}
+.shell-mc{
+    padding: 10px 0 10px 15px;
+}
+.mc{
+    width: 100%;
+    overflow: hidden;
+}
+.showList{
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+div.mgb10 span{
+    font-size: 14px;
+}
+.clist{
+    float: left;
+    width: 180px;
+    height: 210px;
+    margin: 10px;
+    padding: 10px 5px;
+    font-size: 12px;
+    box-sizing: border-box;
+    border: 1px solid blue;
+}
+.himg{
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+}
+.clist a{
+    text-decoration: none;
+}
+.clist a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.himg img{
+    width: 100%;
+}
+.videoinfo p{
+    margin: 8px;
+}
+.videoinfo p:nth-child(2){
+    overflow: hidden;
+}
+.fr{
+    float: right;
+    color: #666;
+}
+.jsHide{
+    display:none ;
+}
+.jsShow{
+    display: block;
+}
+div.searchbtn{
+    width: 766.5px;
+    height: auto;
+    float: right;
+    margin: 10px 0;
+}
+
+button{
+    padding:4px 7px ;
+    margin-left: 5px;
+}
+.menuBtnUp,.menuBtnNum,.menuBtnPoint,.menuBtnDown{
+    border: 1px solid #12937c;
+    color: #12937c;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.clickBtn{
+    border: 1px solid #12937c;
+    background-color: #12937c;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menBtn{
+    width: 400px;
+    display: inline-block;
+    position: relative;
+    left: 350px;
+}
+.menuBtnPoint{
+    border: none;
+    padding: 0;
+}
+div.searchbtn span{
+    font-size: 14px;
+}
+.menBtn input{
+    width: 40px;
+    height: 20px;
+}

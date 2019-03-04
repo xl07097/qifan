@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    background-color: #F8F8F7;
+}
+#main{
+    width: 802px;
+    margin: 10px auto;
+}
+.titlenav{
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+.maleft{
+    width: 100%;
+    overflow: hidden;
+}
+.allside{
+    width: 100%;
+}
+.alltopic{
+    width: 100%;
+    background: #ffffff;
+}
+.atopic{
+    margin: 0 25px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: Tahoma, Geneva, "Microsoft Yahei";
+    border-bottom: 1px dotted #ccc;
+}
+.scimg{
+    float: left;
+    width: 180px;
+    height: 140px;
+    margin-right: 20px;
+}
+.scimg img{
+    width: 180px;
+}
+.scart{
+    float: left;
+    width: 540px;
+}
+h3{
+    margin: 2px 0 6px 0;
+    width: 350px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: normal;
+}
+h3 a,.tcontent a,.name a{
+    color: #12937c;
+    text-decoration: none;
+}
+h3 a:hover,
+.tcontent a:hover,
+.name a:hover,
+.prm a:hover{
+    color: #ED585C;
+    text-decoration: underline;
+}
+span.name{
+    display: block;
+    color: #999;
+    height: 11px;
+    line-height: 11px;
+    padding: 5px 0;
+    font-size: 12px;
+}
+div.tcontent{
+    font-size: 12px;
+}
+div.tcontent p{
+    margin: 3px 0;
+}
+.navlink{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.prm a{
+    color: #12937c;
+    text-decoration: none;
+}
+span.collectcount{
+    float: right;
+    display: inline-block;
+    padding: 0 10px;
+    color: #666;
+    border-right: 1px dotted #666;
+}
+/*分页按钮的样式*/
+.jsHide{
+    display:none ;
+}
+.jsShow{
+    display: block;
+}
+div.searchbtn{
+    width: 766.5px;
+    height: auto;
+    float: right;
+    margin: 10px 0;
+}
+
+button{
+    padding:4px 7px ;
+    margin-left: 5px;
+}
+.menuBtnUp,.menuBtnNum,.menuBtnPoint,.menuBtnDown{
+    border: 1px solid #12937C;
+    color: #12937C;
+    background-color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.clickBtn{
+    border: 1px solid #12937C;
+    background-color: #12937C;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menBtn{
+    width: 400px;
+    display: inline-block;
+    position: relative;
+    left: 350px;
+}
+.menuBtnPoint{
+    border: none;
+    padding: 0;
+}
+div.searchbtn span{
+    font-size: 14px;
+}
+.menBtn input{
+    width: 40px;
+    height: 20px;
+}

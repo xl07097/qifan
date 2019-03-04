@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title%></title>
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+    <link href="/css/topicdetail.css" rel="stylesheet">
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/topicDetail.js"></script>
+</head>
+<body>
+<%- include('./header.html')%>
+<div class="topicBody">
+    <div id="menu">
+        <div class="menu-nav">
+            <span class="menu-span">全部主题站</span>
+            <span class="menu-span">|</span>
+            <span class="menu-span">全部文章</span>
+            <span class="menu-span">|</span>
+        </div>
+    </div>
+    <div id="contant">
+        <% topicdetail.forEach(function(item){ %>
+        <div id="content">
+            <h1 class="content-title"><%= item.topic_title%></h1>
+            <div class="content-detail">
+                <span>来自：</span>
+                <span>主题站</span>
+                <span>作者:</span>
+                <span><a href="#"><%= item.user_name %></a></span>
+                <span><%= item.topic_date %></span>
+            </div>
+            <div style="text-align: center">
+                <% image.forEach(function(item){%>
+                <img src="/images/topic/<%=item.img %>" class="content-image">
+                <% }) %>
+                <div class="content-p">
+                    <%= item.topic_content %>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+    <div class="commentArea">
+        <!--评论框-->
+        <div class="cbox">
+            <div id="add">
+                <!--圆形登录-->
+                <div class="login_block">
+                    <div class="bord">
+                        <span class="line"></span>
+                        <div class="cover_line"></div>
+                    </div>
+                    <div class="login" id="Rlogin">登陆</div>
+                </div>
+                <form id="form1">
+                    <div class="post_block">
+                        <textarea id="areacontent" cols="104" rows="7"></textarea><br>
+                    </div>
+                    <div class="btnline">
+                        <input type="button" id="cmtPost" value="发表" class="postcomment" data-id="" data-type="video">
+                    </div>
+                </form>
+            </div>
+            <!--标头“评论”的效果-->
+            <div class="com_list_outlook">
+                <!--“评论”-->
+                <span class="com_list_style">
+                评论
+                <span class="com_list_style_bord"></span>
+            </span>
+                <!--直线-->
+                <span class="com_list_line"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./footer.html')%>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<title><%= key %>的搜索</title>-->
+    <title><%= title %></title>
+    <link rel="icon" href="/images/icon/logo.ico" type="image/x-ico"/>
+    <link rel="stylesheet" href="/css/searchvideo22.css">
+    <script src="/js/jquery-3.1.1.js"></script>
+    <script src="/js/searchvideo22.js"></script>
+</head>
+<body>
+    <%- include('./header.html') %>
+    <div class="main">
+        <div class="shell-mc">
+            <div class="mgb10">
+                <span>视频搜索&gt;</span>
+                <span class="b">"<span class="search-key"><%= key %></span>"的搜索结果</span>
+            </div>
+        </div>
+        <div class="mc">
+            <div class="showList" data-length="<%= searchlist.length %>">
+                <% searchlist.forEach(function(item){%>
+                <div class="clist">
+                    <div class="himg">
+                        <a href="/video/detail?id=<%= item.video_id %>">
+                            <img src="/images/<%= item.video_img %>" alt="<%= item.video_img %>" title="<%= item.video_img %>">
+                        </a>
+                    </div>
+                    <div class="videoinfo">
+                        <p>
+                            <a href="/video/detail?id=<%= item.video_id %>"><%= item.video_name %></a>
+                        </p>
+                        <p class="">
+                            <a href="/personals/?id=<%= item.t_user_user_id %>"><%= item.user_name %></a>
+                            <span class="fr">
+                                <span>收藏<%= item.video_collects %></span>&nbsp;
+                                <span>点赞<%= item.video_likes %></span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <%})%>
+            </div>
+        </div>
+
+    </div>
+    <%- include('./footer.html') %>
+</body>
+</html>
